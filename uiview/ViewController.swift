@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
   
+    @IBOutlet weak var segment: UISegmentedControl!
     var timer:Timer!
     var counter = 0.0
 
@@ -33,7 +34,12 @@ class ViewController: UIViewController {
     func roteatView(targateView:UIView){
         let a = counter * M_PI / 180
         targateView.transform = CGAffineTransform(rotationAngle: CGFloat(a))
-        counter += 4
+        if segment.selectedSegmentIndex == 0 {
+            counter += 4
+        }else{
+            counter -= 4
+        }
+        
         
         
     }

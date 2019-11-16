@@ -22,10 +22,10 @@
                                     <constraint firstAttribute="width" constant="269" id="U8q-hc-ue1"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="三"/>
+                                    <segment title="正轉"/>
+                                    <segment title="反轉"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2AV-iH-ZYM"/>
                                 </connections>
@@ -38,6 +38,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="segment" destination="5tM-Pu-ebd" id="IEc-8o-7sR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
