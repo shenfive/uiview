@@ -30,7 +30,7 @@
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2AV-iH-ZYM"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zN6-nf-4y9">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="zN6-nf-4y9">
                                 <rect key="frame" x="60.5" y="175" width="254" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qgF-Dz-Sar"/>
@@ -52,6 +52,7 @@
                     </view>
                     <connections>
                         <outlet property="segment" destination="5tM-Pu-ebd" id="IEc-8o-7sR"/>
+                        <outlet property="speedSlider" destination="zN6-nf-4y9" id="71d-NZ-7vn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

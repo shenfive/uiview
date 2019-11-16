@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
   
+    @IBOutlet weak var speedSlider: UISlider!
     @IBOutlet weak var segment: UISegmentedControl!
     var timer:Timer!
     var counter = 0.0
@@ -36,9 +37,9 @@ class ViewController: UIViewController {
         let a = counter * M_PI / 180
         targateView.transform = CGAffineTransform(rotationAngle: CGFloat(a))
         if segment.selectedSegmentIndex == 0 {
-            counter += 4
+            counter += Double(speedSlider.value)
         }else{
-            counter -= 4
+            counter -= Double(speedSlider.value)
         }
         
         
