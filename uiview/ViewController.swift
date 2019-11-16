@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     var theView:UIView!
     var timer:Timer!
-    
+    var counter = 0.0
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,13 +22,18 @@ class ViewController: UIViewController {
         theView.backgroundColor = UIColor.red
         theView.transform = CGAffineTransform(rotationAngle: 0)
         view.addSubview(theView)
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
             self.roteatView(targateView: self.theView)
         })
     }
     
     func roteatView(targateView:UIView){
         print("rotate")
+        let a = counter * M_PI / 180
+        targateView.transform = CGAffineTransform(rotationAngle: CGFloat(a))
+        counter += 4
+        
+        
     }
     
     
