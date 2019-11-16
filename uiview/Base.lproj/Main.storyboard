@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5tM-Pu-ebd">
-                                <rect key="frame" x="53" y="100" width="269" height="32"/>
+                                <rect key="frame" x="62.5" y="100" width="250" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="5gu-mW-fTe"/>
-                                    <constraint firstAttribute="width" constant="269" id="U8q-hc-ue1"/>
+                                    <constraint firstAttribute="width" constant="250" id="U8q-hc-ue1"/>
                                 </constraints>
                                 <segments>
                                     <segment title="正轉"/>
@@ -30,10 +30,22 @@
                                     <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2AV-iH-ZYM"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zN6-nf-4y9">
+                                <rect key="frame" x="60.5" y="175" width="254" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qgF-Dz-Sar"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="KH9-Bu-Gjw"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5tM-Pu-ebd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AzB-9k-9Bu"/>
+                            <constraint firstItem="zN6-nf-4y9" firstAttribute="top" secondItem="5tM-Pu-ebd" secondAttribute="bottom" constant="44" id="GlM-cg-chb"/>
+                            <constraint firstItem="zN6-nf-4y9" firstAttribute="trailing" secondItem="5tM-Pu-ebd" secondAttribute="trailing" id="Hcs-nF-Ilq"/>
+                            <constraint firstItem="zN6-nf-4y9" firstAttribute="leading" secondItem="5tM-Pu-ebd" secondAttribute="leading" id="VSx-Js-Qic"/>
                             <constraint firstItem="5tM-Pu-ebd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="qve-vm-UzL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
