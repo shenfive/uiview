@@ -12,8 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("xxx")
+        
     }
 
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+    }
 }
 
