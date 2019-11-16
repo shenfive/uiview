@@ -11,17 +11,28 @@ import UIKit
 class ViewController: UIViewController {
 
     var theView:UIView!
+    var timer:Timer!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         theView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        theView.center = self.view.center
+        theView.center = view.center
         theView.backgroundColor = UIColor.red
-        self.view.addSubview(theView)
-        
-        
+        theView.transform = CGAffineTransform(rotationAngle: 0)
+        view.addSubview(theView)
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { (timer) in
+            self.roteatView(targateView: self.theView)
+        })
     }
+    
+    func roteatView(targateView:UIView){
+        print("rotate")
+    }
+    
+    
+    
 
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
